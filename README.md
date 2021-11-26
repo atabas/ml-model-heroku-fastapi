@@ -28,10 +28,19 @@
 * Set up DVC in the action and specify a command to dvc pull.
 
 # Data
-* Download census.csv and commit it to dvc.
+* Download census.csv and commit it to dvc:
+    * git rm -r --cached 'starter/data/census.csv'
+    *  git commit -m "stop tracking starter data census.csv"
+    * dvc add starter/data/census.csv
+    * dvc remote modify --local myremote access_key_id name1
+    * dvc remote modify --local myremote secret_access_key name2
+    * dvc push --remote myremote
 * This data is messy, try to open it in pandas and see what you get.
-* To clean it, use your favorite text editor to remove all spaces.
-* Commit this modified data to dvc (we often want to keep the raw data untouched but then can keep updating the cooked version).
+* To clean it, use your favorite text editor to remove all spaces:
+    * cat starter/data/census.csv | tr -d "[:blank:]" >> starter/data/census_nospace.csv
+* Commit this modified data to dvc (we often want to keep the raw data untouched but then can keep updating the cooked version):
+    * dvc add starter/data/census_nospace.csv
+    * dvc push --remote myremote
 
 # Model
 * Using the starter code, write a machine learning model that trains on the clean data and saves the model. Complete any function that has been started.
