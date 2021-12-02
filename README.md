@@ -42,9 +42,6 @@
     * dvc add starter/data/census_nospace.csv
     * dvc push --remote myremote
 
-# Model
-* Write unit tests for at least 3 functions in the model code.
-
 # API Creation
 *  Create a RESTful API using FastAPI this must implement:
     * GET on the root giving a welcome message.
