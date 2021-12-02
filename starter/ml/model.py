@@ -23,7 +23,7 @@ def train_model(X_train, y_train):
     """
 
     cv = KFold(n_splits=10, shuffle=True, random_state=1)
-    model = LogisticRegression()
+    model = LogisticRegression(solver='lbfgs', max_iter=1000)
     model.fit(X_train, y_train)
     scores = cross_val_score(model, X_train, y_train, scoring='accuracy',
                              cv=cv, n_jobs=-1)
@@ -50,6 +50,7 @@ def compute_model_metrics(y, preds):
     fbeta = fbeta_score(y, preds, beta=1, zero_division=1)
     precision = precision_score(y, preds, zero_division=1)
     recall = recall_score(y, preds, zero_division=1)
+    print(f"precision:{precision}, recall: {recall}, fbeta: {fbeta}")
     return precision, recall, fbeta
 
 
