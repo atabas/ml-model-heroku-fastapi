@@ -44,8 +44,6 @@
 
 # Model
 * Write unit tests for at least 3 functions in the model code.
-* Write a function that outputs the performance of the model on slices of the data.
-    * Suggestion: for simplicity, the function can just output the performance on slices of just the categorical features.
 
 # API Creation
 *  Create a RESTful API using FastAPI this must implement:
