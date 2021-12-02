@@ -22,7 +22,7 @@
         * aws configure import --csv file://../Downloads/new_user_credentials.csv
 
 ## GitHub Actions
-* Setup GitHub Actions on your repository. You can use one of the pre-made GitHub Actions if at a minimum it runs pytest and flake8 on push and requires both to pass without error.
+* Setup GitHub Actions on your repository. At a minimum it runs pytest and flake8 on push and requires both to pass without error.
 * Make sure you set up the GitHub Action to have the same version of Python as you used in development.
 * Add your AWS credentials to the Action.
 * Set up DVC in the action and specify a command to dvc pull.
