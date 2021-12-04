@@ -26,8 +26,8 @@ class CensusDataModel(BaseModel):
         "5th-6th",
         "Preschool"
     ]
-    education-num: int
-    maritalstatus: Literal[
+    education_num: int
+    marital_status: Literal[
         "Married-civ-spouse", "Divorced", "Never-married", "Separated", "Widowed", "Married-spouse-absent", "Married-AF-spouse"
     ]
     occupation: Literal[
@@ -51,8 +51,8 @@ class CensusDataModel(BaseModel):
     ]
     race: Literal["White", "Asian-Pac-Islander", "Amer-Indian-Eskimo", "Other", "Black"]
     sex: Literal["Female", "Male"]
-    hoursperweek: int
-    nativecountry: Literal[
+    hours_per_week: int
+    native_country: Literal[
         "United-States",
         "Cambodia",
         "England",
@@ -95,4 +95,6 @@ class CensusDataModel(BaseModel):
         "Hong",
         "Holand-Netherlands"
     ]
+    capital_gain: int
+    capital_loss: int
 
