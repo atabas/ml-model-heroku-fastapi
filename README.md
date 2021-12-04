@@ -45,7 +45,7 @@
 # API Creation
 * Run python starter/main.py to start the API:
     * Try out the prediction endpoint from http://127.0.0.1:8000/docs#/default/predict_predict_post
-* Write 3 unit tests to test the API (one for the GET and two for POST, one that tests each prediction).
+* 3 unit tests to test the API (one for the GET and two for POST, one that tests each prediction) are in starter/main_test.py.
 
 # API Deployment
 * Create a free Heroku account (for the next steps you can either use the web GUI or download the Heroku CLI).
