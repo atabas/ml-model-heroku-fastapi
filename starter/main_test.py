@@ -33,7 +33,7 @@ def test_predict_less_than_50():
 def test_predict_greater_than_50():
     data = {
         "age": 40,
-        "workclass": "Private",
+        "workclass": "Federal-gov",
         "fnlwgt": 0,
         "education": "Doctorate",
         "education_num": 16,
@@ -42,9 +42,9 @@ def test_predict_greater_than_50():
         "relationship": "Husband",
         "race": "White",
         "sex": "Male",
-        "hours_per_week": 60,
-        "native_country": "United-States",
-        "capital_gain": 100,
+        "hours_per_week": 100,
+        "native_country": "Canada",
+        "capital_gain": 1000,
         "capital_loss": 0
     }
     r = client.post('/predict', json=data)
