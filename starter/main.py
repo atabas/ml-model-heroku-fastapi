@@ -2,11 +2,11 @@
 import pandas as pd
 import uvicorn
 import numpy as np
-from census_data_model import CensusDataModel
+from starter.census_data_model import CensusDataModel
 from fastapi import FastAPI
 import joblib
-from ml.data import process_data
-from ml.model import inference
+from starter.ml.data import process_data
+from starter.ml.model import inference
 
 app = FastAPI()
 
