@@ -1,3 +1,5 @@
+- The live API is available at: https://ml-model-heroku-fastapi.herokuapp.com/docs
+
 # Environment Set up
 * conda create -n [envname] "python=3.8" scikit-learn dvc pandas numpy pytest jupyter jupyterlab fastapi uvicorn -c conda-forge
 * Install git either through conda (“conda install git”) or through your CLI, e.g. sudo apt-get git.
@@ -50,4 +52,10 @@
 # API Deployment
 * Create a new app and have it deployed from your GitHub repository.
     - Set up a Procfile, configure New app from Heroku dashboard, select Python buildpack and change paths in app
-* Write a script that uses the requests module to do one POST on your live API.
+* Set up DVC on Heroku using the instructions contained in teh starter directory
+    - Add Aptfile, add buildpack, add specific code to main.py
+* Add AWS Credentials:
+    - heroku git:remote --app ml-model-heroku-fastapi
+    - heroku config:set AWS_ACCESS_KEY_ID=x AWS_SECRET_ACCESS_KEY=y
+* Write a script that uses the requests module to do one POST on your live API
+    - python heroku_request_live_api.py
