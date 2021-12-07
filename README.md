@@ -48,9 +48,6 @@
 * 3 unit tests to test the API (one for the GET and two for POST, one that tests each prediction) are in starter/main_test.py.
 
 # API Deployment
-* Create a free Heroku account (for the next steps you can either use the web GUI or download the Heroku CLI).
 * Create a new app and have it deployed from your GitHub repository.
-    * Enable automatic deployments that only deploy if your continuous integration passes.
-    * Hint: think about how paths will differ in your local environment vs. on Heroku.
-    * Hint: development in Python is fast! But how fast you can iterate slows down if you rely on your CI/CD to fail before fixing an issue. I like to run flake8 locally before I commit changes.
+    - Set up a Procfile, configure New app from Heroku dashboard, select Python buildpack and change paths in app
 * Write a script that uses the requests module to do one POST on your live API.
