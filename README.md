@@ -1,3 +1,4 @@
+- Github repository: https://github.com/atabas/ml-model-heroku-fastapi
 - The live API is available at: https://ml-model-heroku-fastapi.herokuapp.com/docs
 
 # Environment Set up
