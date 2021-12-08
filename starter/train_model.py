@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 # Add the necessary imports for the starter code.
 import pandas as pd
 from ml.data import process_data
-from ml.model import train_model
+from ml.model import train_model, compute_model_metrics
 from joblib import dump
 
 def train():
@@ -35,6 +35,17 @@ def train():
     dump(model, "./starter/model/model.joblib")
     dump(encoder, "./starter/model/encoder.joblib")
     dump(lb, "./starter/model/lb.joblib")
+
+    X_test, y_test, _, _ = process_data(
+        test,
+        categorical_features=cat_features,
+        label="salary",
+        encoder=encoder,
+        lb=lb,
+        training=False
+    )
+    preds = model.predict(X_test)
+    precision, recall, fbeta = compute_model_metrics(y_test, preds)
 
 if __name__ == '__main__':
     train()
