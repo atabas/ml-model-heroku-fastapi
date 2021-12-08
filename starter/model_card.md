@@ -20,7 +20,7 @@ Source of data: https://archive.ics.uci.edu/ml/datasets/census+income; 80-20 spl
 
 ## Metrics
 
-precision, recall and F-Beta score
+precision:0.6932203389830508, recall: 0.525706940874036, fbeta: 0.5979532163742691
 
 ## Ethical Considerations
 
